@@ -1,63 +1,112 @@
+
 ```markdown
-# 🧠 AI-Powered Second Brain (Gemini + Obsidian)
+<div align="center">
 
-Un sistema de gestión de conocimiento personal automatizado basado en el patrón "LLM Wiki" (popularizado por Andrej Karpathy), construido utilizando **Python**, la **API oficial de Google Gemini** y **Obsidian**.
+# 🧠 AI-Powered Second Brain
+### *Un sistema de conocimiento personal automatizado, impulsado por Obsidian y la API de Google Gemini.*
 
-## 🚀 Características
-- **Separación de Capas:** Aislamiento estricto entre documentos de entrada crudos (`raw/`) y conocimiento sintetizado (`wiki/`).
-- **Ingesta Automatizada (`ingesta.py`):** Procesa notas desordenadas aplicando un manual de reglas de estructuración y enlazado inteligente.
-- **Consulta Contextual (`consulta.py`):** Interfaz para consultar directamente tu base de conocimientos sin salir de la terminal.
-- **Integración Visual:** Soporte directo con Obsidian y plugins de IA para una experiencia fluida.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Obsidian](https://img.shields.io/badge/Obsidian-Knowledge%20Base-7c3aed?style=for-the-badge&logo=obsidian&logoColor=white)](https://obsidian.md/)
+[![Gemini API](https://img.shields.io/badge/Google%20Gemini-API-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 📁 Estructura del Proyecto
+</div>
+
+---
+
+## 💡 Sobre el Proyecto
+
+Este proyecto implementa la arquitectura **"LLM Wiki"** para la gestión de conocimiento personal. Separa estrictamente el contenido en bruto de la síntesis estructurada, permitiendo automatizar la ingesta y consulta de notas mediante inteligencia artificial sin comprometer la privacidad local.
+
+---
+
+## 🛠️ Arquitectura y Tecnologías
+
+| Componente | Tecnología / Herramienta | Propósito |
+| :--- | :--- | :--- |
+| **Interfaz de Usuario** | Obsidian + Gemini Scribe | Interacción visual y navegación mediante enlaces tipo wiki (`[[links]]`). |
+| **Automatización** | Python (`google-genai`, `python-dotenv`) | Procesamiento backend, ingesta de notas y consultas contextuales. |
+| **Modelo de IA** | Google Gemini (`gemini-flash`) | Análisis semántico, estructuración y control alucinatorio estricto. |
+| **Control de Versiones** | Git / GitHub | Gestión de código fuente y distribución de plantillas. |
+
+---
+
+## 📂 Estructura del Repositorio
 
 ```text
 My_Second_Brain/
 │
-├── raw/               # Apuntes desordenados y borradores (Ignorado en Git)
-├── wiki/              # Base de conocimientos estructurada y enlazada (Ignorado en Git)
-├── scripts/
-│   ├── ingesta.py     # Script para procesar notas crudas con Gemini
-│   └── consulta.py    # Script para consultar el segundo cerebro
+├── 📂 raw/                  # Apuntes desordenados y borradores (Ignorado en Git)
+├── 📂 wiki/                 # Base de conocimientos estructurada (Ignorado en Git)
+├── 📂 scripts/
+│   ├── 📜 ingesta.py       # Script de transformación y estructuración con IA
+│   └── 📜 consulta.py     # Interfaz de consulta contextual sobre la wiki
 │
-├── .env               # Credenciales privadas (Ignorado en Git)
-├── .gitignore         # Configuración de exclusión para privacidad
-├── GEMINI.md          # Manual de reglas y esquema del sistema para la IA
-└── README.md          # Documentación del proyecto
+├── 🔒 .env                  # Credenciales privadas (Ignorado en Git)
+├── 🚫 .gitignore            # Configuración de seguridad y privacidad
+├── 🤖 GEMINI.md             # Manual de reglas y directivas del sistema
+└── 📖 README.md             # Documentación principal
 
 ```
 
-## ⚙️ Configuración e Instalación
+---
 
-1. **Clona el repositorio:**
+## 🚀 Guía de Instalación Rápida
+
+### 1. Clonar el repositorio
+
 ```bash
-git clone [https://github.com/TU-USUARIO/TU-REPOSITORIO.git](https://github.com/TU-USUARIO/TU-REPOSITORIO.git)
-cd My_Second_Brain
+git clone [https://github.com/CesarY10/gemini-second-brain.git](https://github.com/CesarY10/gemini-second-brain.git)
+cd gemini-second-brain
 
 ```
 
+### 2. Instalar dependencias
 
-2. **Instala las dependencias de Python:**
 ```bash
 py -m pip install google-genai python-dotenv
 
 ```
 
+### 3. Configurar credenciales
 
-3. **Configura tus credenciales:**
-Crea un archivo llamado `.env` en la raíz y añade tu API Key de Gemini:
+Crea un archivo llamado `.env` en la raíz del proyecto y añade tu clave de acceso:
+
 ```env
-GEMINI_API_KEY=tu_api_key_aqui
+GEMINI_API_KEY=tu_api_key_real_aqui
+
+```
+
+### 4. Uso del Sistema
+
+* **Ingesta:** Coloca tus notas crudas en la carpeta `raw/` y ejecuta el script:
+```bash
+py scripts/ingesta.py
 
 ```
 
 
-4. **Uso:**
-* Coloca tus notas en `raw/` y corre el script de ingesta: `py scripts/ingesta.py`
-* Realiza consultas a tu cerebro digital ejecutando: `py scripts/consulta.py`
-
-
+* **Consulta:** Realiza preguntas directas a tu base de conocimientos ejecutando:
+```bash
+py scripts/consulta.py
 
 ```
+
+
+
+---
+
+## 🛡️ Privacidad y Seguridad
+
+Las carpetas de contenido personal (`raw/` y `wiki/`) junto con el archivo de credenciales (`.env`) se encuentran completamente excluidos del control de versiones mediante `.gitignore`. Este repositorio funciona como una **plantilla segura** lista para ser clonada por cualquier usuario.
+
+```
+
+### ¿Cómo actualizarlo en tu GitHub en un par de clics?
+1. Abre tu archivo `README.md` en Visual Studio Code.
+2. Borra todo lo que tiene adentro, pega este nuevo contenido y guárdalo (`Ctrl + S`).
+3. Ve a la pestaña de **Source Control** en VS Code, escribe un commit rápido como *"Actualizar diseño del README"* (haz clic en **Commit**) y luego haz clic en **Sync Changes** o **Push** para enviarlo a GitHub. 
+
+Al recargar tu repositorio en el navegador, verás que la presentación cambia por completo y se ve sumamente profesional y ordenada.
 
 ```
