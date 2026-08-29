@@ -1,4 +1,3 @@
-```markdown
 # 🧠 AI-Powered Second Brain
 ### Un sistema de conocimiento personal automatizado, impulsado por Obsidian y la API de Google Gemini.
 
