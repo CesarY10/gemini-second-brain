@@ -1,16 +1,11 @@
-
 ```markdown
-<div align="center">
-
 # 🧠 AI-Powered Second Brain
-### *Un sistema de conocimiento personal automatizado, impulsado por Obsidian y la API de Google Gemini.*
+### Un sistema de conocimiento personal automatizado, impulsado por Obsidian y la API de Google Gemini.
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Obsidian](https://img.shields.io/badge/Obsidian-Knowledge%20Base-7c3aed?style=for-the-badge&logo=obsidian&logoColor=white)](https://obsidian.md/)
 [![Gemini API](https://img.shields.io/badge/Google%20Gemini-API-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-</div>
 
 ---
 
@@ -36,16 +31,16 @@ Este proyecto implementa la arquitectura **"LLM Wiki"** para la gestión de cono
 ```text
 My_Second_Brain/
 │
-├── 📂 raw/                  # Apuntes desordenados y borradores (Ignorado en Git)
-├── 📂 wiki/                 # Base de conocimientos estructurada (Ignorado en Git)
-├── 📂 scripts/
-│   ├── 📜 ingesta.py       # Script de transformación y estructuración con IA
-│   └── 📜 consulta.py     # Interfaz de consulta contextual sobre la wiki
+├── raw/                  # Apuntes desordenados y borradores (Ignorado en Git)
+├── wiki/                 # Base de conocimientos estructurada (Ignorado en Git)
+├── scripts/
+│   ├── ingesta.py       # Script de transformación y estructuración con IA
+│   └── consulta.py     # Interfaz de consulta contextual sobre la wiki
 │
-├── 🔒 .env                  # Credenciales privadas (Ignorado en Git)
-├── 🚫 .gitignore            # Configuración de seguridad y privacidad
-├── 🤖 GEMINI.md             # Manual de reglas y directivas del sistema
-└── 📖 README.md             # Documentación principal
+├── .env                  # Credenciales privadas (Ignorado en Git)
+├── .gitignore            # Configuración de seguridad y privacidad
+├── GEMINI.md             # Manual de reglas y directivas del sistema
+└── README.md             # Documentación principal
 
 ```
 
@@ -102,15 +97,10 @@ Las carpetas de contenido personal (`raw/` y `wiki/`) junto con el archivo de cr
 
 ```
 
-### ¿Cómo actualizarlo en tu GitHub en un par de clics?
-1. Abre tu archivo `README.md` en Visual Studio Code.
-2. Borra todo lo que tiene adentro, pega este nuevo contenido y guárdalo (`Ctrl + S`).
-3. Ve a la pestaña de **Source Control** en VS Code, escribe un commit rápido como *"Actualizar diseño del README"* (haz clic en **Commit**) y luego haz clic en **Sync Changes** o **Push** para enviarlo a GitHub. 
+### Pasos finales:
+1. Reemplaza todo el contenido de tu `README.md` en VS Code con este código de arriba.
+2. Guarda los cambios con **`Ctrl + S`**.
+3. Haz el **Commit** y el **Push** desde tu pestaña de Source Control en VS Code.
+4. Recarga tu página de GitHub y verás que ahora sí aparecen los iconos de colores de los badges y un diseño limpio y profesional.
 
-Al recargar tu repositorio en el navegador, verás que la presentación cambia por completo y se ve sumamente profesional y ordenada.
-
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> ebf10e045f396fd71abaa0ec02b646688b232e70
