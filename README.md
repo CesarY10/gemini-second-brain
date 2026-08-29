@@ -1,7 +1,3 @@
-Para que tu repositorio pase de verse estándar a lucir como un proyecto de nivel profesional de ingeniería, la clave está en pulir el archivo `README.md` con un diseño visualmente atractivo (usando badges o insignias técnicas, bloques de código ordenados y una estructura más limpia).
-
-Aquí tienes una versión mejorada y mucho más estética de tu `README.md` que puedes copiar, pegar y reemplazar en tu archivo:
-
 ```markdown
 <div align="center">
 
