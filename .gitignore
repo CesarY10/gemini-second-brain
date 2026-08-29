@@ -1,0 +1,5 @@
+# Bloquear notas y secretos personales
+raw/
+wiki/
+.env
+__pycache__/
