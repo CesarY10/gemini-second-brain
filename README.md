@@ -109,4 +109,8 @@ Las carpetas de contenido personal (`raw/` y `wiki/`) junto con el archivo de cr
 
 Al recargar tu repositorio en el navegador, verás que la presentación cambia por completo y se ve sumamente profesional y ordenada.
 
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> ebf10e045f396fd71abaa0ec02b646688b232e70

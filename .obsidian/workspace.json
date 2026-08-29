@@ -179,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5
+    "width": 401.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,6 +196,7 @@
   },
   "active": "601873c5e3722263",
   "lastOpenFiles": [
+    "gemini-scribe/AGENTS.md",
     "Idea de prueba.md",
     "README.md",
     "gemini-scribe/Prompts/example-expert.md",
