@@ -3,3 +3,6 @@ raw/
 wiki/
 .env
 __pycache__/
+
+# myriam's personal notes
+LOCAL.md
