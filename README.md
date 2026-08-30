@@ -9,13 +9,11 @@
 ---
 
 ## 💡 Sobre el Proyecto
-
 Este proyecto implementa la arquitectura **"LLM Wiki"** para la gestión de conocimiento personal. Separa estrictamente el contenido en bruto de la síntesis estructurada, permitiendo automatizar la ingesta y consulta de notas mediante inteligencia artificial sin comprometer la privacidad local.
 
 ---
 
 ## 🛠️ Arquitectura y Tecnologías
-
 | Componente | Tecnología / Herramienta | Propósito |
 | :--- | :--- | :--- |
 | **Interfaz de Usuario** | Obsidian + Gemini Scribe | Interacción visual y navegación mediante enlaces tipo wiki (`[[links]]`). |
@@ -26,21 +24,22 @@ Este proyecto implementa la arquitectura **"LLM Wiki"** para la gestión de cono
 ---
 
 ## 📂 Estructura del Repositorio
-
 ```text
 My_Second_Brain/
 │
 ├── raw/                  # Apuntes desordenados y borradores (Ignorado en Git)
 ├── wiki/                 # Base de conocimientos estructurada (Ignorado en Git)
 ├── scripts/
+│   ├── config.py        # Constantes compartidas (ej. modelo de Gemini)
 │   ├── ingesta.py       # Script de transformación y estructuración con IA
 │   └── consulta.py     # Interfaz de consulta contextual sobre la wiki
 │
 ├── .env                  # Credenciales privadas (Ignorado en Git)
+├── .env.example          # Plantilla de variables de entorno
 ├── .gitignore            # Configuración de seguridad y privacidad
+├── requirements.txt      # Dependencias de Python
 ├── GEMINI.md             # Manual de reglas y directivas del sistema
 └── README.md             # Documentación principal
-
 ```
 
 ---
@@ -48,58 +47,44 @@ My_Second_Brain/
 ## 🚀 Guía de Instalación Rápida
 
 ### 1. Clonar el repositorio
-
 ```bash
-git clone [https://github.com/CesarY10/gemini-second-brain.git](https://github.com/CesarY10/gemini-second-brain.git)
+git clone https://github.com/CesarY10/gemini-second-brain.git
 cd gemini-second-brain
-
 ```
 
 ### 2. Instalar dependencias
 
+**Windows:**
 ```bash
-py -m pip install google-genai python-dotenv
+py -m pip install -r requirements.txt
+```
 
+**macOS / Linux:**
+```bash
+python3 -m pip install -r requirements.txt
 ```
 
 ### 3. Configurar credenciales
+Copia `.env.example` a `.env` y añade tu clave de acceso real:
 
-Crea un archivo llamado `.env` en la raíz del proyecto y añade tu clave de acceso:
+```bash
+cp .env.example .env
+```
 
 ```env
 GEMINI_API_KEY=tu_api_key_real_aqui
-
 ```
 
 ### 4. Uso del Sistema
+* **Ingesta:** Coloca todas tus notas crudas (`.md`) dentro de `raw/` y ejecuta el script. Cada nota se procesa y se guarda en `wiki/` con el mismo nombre de archivo:
+  * Windows: `py scripts/ingesta.py`
+  * macOS / Linux: `python3 scripts/ingesta.py`
 
-* **Ingesta:** Coloca tus notas crudas en la carpeta `raw/` y ejecuta el script:
-```bash
-py scripts/ingesta.py
-
-```
-
-
-* **Consulta:** Realiza preguntas directas a tu base de conocimientos ejecutando:
-```bash
-py scripts/consulta.py
-
-```
-
-
+* **Consulta:** Edita la variable `mi_pregunta` en `scripts/consulta.py` con tu pregunta y ejecútalo:
+  * Windows: `py scripts/consulta.py`
+  * macOS / Linux: `python3 scripts/consulta.py`
 
 ---
 
 ## 🛡️ Privacidad y Seguridad
-
 Las carpetas de contenido personal (`raw/` y `wiki/`) junto con el archivo de credenciales (`.env`) se encuentran completamente excluidos del control de versiones mediante `.gitignore`. Este repositorio funciona como una **plantilla segura** lista para ser clonada por cualquier usuario.
-
-```
-
-### Pasos finales:
-1. Reemplaza todo el contenido de tu `README.md` en VS Code con este código de arriba.
-2. Guarda los cambios con **`Ctrl + S`**.
-3. Haz el **Commit** y el **Push** desde tu pestaña de Source Control en VS Code.
-4. Recarga tu página de GitHub y verás que ahora sí aparecen los iconos de colores de los badges y un diseño limpio y profesional.
-
-```
